@@ -92,8 +92,10 @@ ID     | TITOLO | DESCRIZIONE
   - App, contiene il main e parte da qui l'esecuzione del gioco;
 
 
-![Immagine](MicrosoftTeams-image.png)|
+
 ## 4 Diagramma UML
+
+![Immagine](MicrosoftTeams-image.png)|
 
 ### 4.1 Architettura Client/Server
 
