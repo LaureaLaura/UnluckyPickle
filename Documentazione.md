@@ -93,7 +93,7 @@ ID     | TITOLO | DESCRIZIONE
 
 
 
-## 4 Diagramma UML
+## 4. Diagramma UML
 
 ![Immagine](MicrosoftTeams-image.png)|
 
