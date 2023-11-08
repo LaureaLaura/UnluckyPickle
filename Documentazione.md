@@ -111,7 +111,7 @@ ID     | TITOLO | DESCRIZIONE
 
 ## 7. SPECIFICA ALGEBRICA LISTA
 
-Nel nostro progetto viene usata molto frequentemente la struttura algebrica lista. 
+Nel nostro progetto viene utilizzata molto frequentemente la struttura algebrica lista. Questa viene utilizata per la lista degli oggetti dell'inventario, la lista delle stanze che ci sono nel gioco e la lista di comandi possibili da usare.
 Una lista è una sequenza finita, anche vuota, di elementi dello stesso tipo. 
 La differenza col concetto di insieme è che mentre in un insieme un elemento non può comparire più di una volta, nella lista uno stesso elemento può comparire più volte, in posizione diverse. 
 
