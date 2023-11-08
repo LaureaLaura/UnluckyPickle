@@ -158,5 +158,3 @@ b= false altrimenti
 ● canclista(p, l) = l' 
 – PRE: p = pos(i) 1 ≤ i ≤ n
 – POST: l' = <a1, a2, … , ai-1, ai+1, … , an>
-
-
