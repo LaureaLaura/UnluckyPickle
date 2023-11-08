@@ -99,6 +99,7 @@ ID     | TITOLO | DESCRIZIONE
 ## 5. MAPPA GIOCO
 ![Immagine](MappaGioco.png)
 
+
 ## 6. SPECIFICA ALGEBRICA LISTA
 
 Nel nostro progetto viene usata molto frequentemente la struttura algebrica lista. 
@@ -122,14 +123,9 @@ La differenza col concetto di insieme è che mentre in un insieme un elemento no
 
 ## 6.3 SPECIFICA SEMANTICA LISTA
 Tipi
-– Lista: insieme delle sequenze l = < a1
-, a2
-, … , an
- >, n>=0, di 
-elementi di tipo tipoelem dove l'elemento i-esimo ha valore a(i) e 
-posizione pos(i)
+– Lista: insieme delle sequenze l = < a1, a2, … , an>, n>=0, di  elementi di tipo tipoelem dove l'elemento i-esimo ha valore a(i) e  posizione pos(i)
 – boolean: insieme dei valori di verità
-Operatori
+Operatori:
 ● crealista = l'
 – POST: l' = <> (sequenza vuota)
 ● listavuota(l) = b
@@ -140,9 +136,7 @@ Operatori
 – POST: a = a(i)
  ● scrivilista(a, p, l) = l'
 – PRE: p = pos(i) 1 <= i <= n
-– POST: l' = < a1
-, a2
-, … , ai-1, a, ai+1, … , an
+– POST: l' = < a1 a2, … , ai-1, a, ai+1, … , an
  >
 ● primolista(l) = p
 – POST: p = pos(1)
@@ -158,9 +152,11 @@ b= false altrimenti
 – POST: q = pos(i-1)
 ● inslista(a, p, l) = l'
 – PRE: p = pos(i) 1 ≤ i ≤ n+1
-– POST: l' = <a1, a2, … , ai-1, a, ai, ai+1, … , an>, se 1 ≤ i ≤ nl' = <a1, a2, … ,an, a> , se i = n+1
+– POST: l' = <a1, a2, … , ai-1, a, ai, ai+1, … , an>,
+ se 1 ≤ i ≤ nl' = <a1, a2, … ,an, a> , se i = n+1
  (e quindi l' = < a > se i = 1 e l = < >)
 ● canclista(p, l) = l' 
 – PRE: p = pos(i) 1 ≤ i ≤ n
 – POST: l' = <a1, a2, … , ai-1, ai+1, … , an>
+
 
