@@ -10,6 +10,15 @@ Questo documento fornisce una documentazione riguardante il progetto realizzato 
 
 
 # INDICE
+1. [Introduzione](#1-Introduzione)
+2. [Requisiti](#2-Requisiti-funzionali)
+3. [Requisiti non funzionali](#3-Requisiti-non-funzionali)
+4. [Divisione in Package e Classi Implementate](#4-Divisione-in-Package-e-Classi-Implementate)
+5. [Diagramma UML](#5-Diagramma-UML)
+6. [MAPPA GIOCO](#6-MAPPA-GIOCO)
+7. [SPECIFICA ALGEBRICA LISTA](#SPECIFICA-ALGEBRICA-LISTA)
+   1. [SPECIFICA SINTATTICA LISTA](#71-SPECIFICA-SINTATTICA-LISTA)
+    2. [SPECIFICA SEMANTICA LISTA](#72-SPECIFICA-SEMANTICA-LISTA)
 
 
 
@@ -46,7 +55,7 @@ ID     | TITOLO | DESCRIZIONE
 
 
 
-## 2.2  Requisiti non funzionali
+## 3  Requisiti non funzionali
 
 |  ID     | REQUISITO        | DESCRIZIONE                                                  |
 | :---:   | ---------------- | :----------------------------------------------------------- |
@@ -63,7 +72,7 @@ ID     | TITOLO | DESCRIZIONE
 | `RNF11` |Robustezza | Il programma è capace di gestire le situazioni in cui si manifestano errori o eccezioni dovuti a mosse e/o comandi non validi 
 
 
-## 3. Divisione in Package e Classi Implementate
+## 4. Divisione in Package e Classi Implementate
 
 
 
@@ -93,23 +102,23 @@ ID     | TITOLO | DESCRIZIONE
 
 
 
-## 4. Diagramma UML
+## 5. Diagramma UML
 
 ![Immagine](MicrosoftTeams-image.png)
-## 5. MAPPA GIOCO
+## 6. MAPPA GIOCO
 ![Immagine](MappaGioco.png)
 
 
-## 6. SPECIFICA ALGEBRICA LISTA
+## 7. SPECIFICA ALGEBRICA LISTA
 
 Nel nostro progetto viene usata molto frequentemente la struttura algebrica lista. 
 Una lista è una sequenza finita, anche vuota, di elementi dello stesso tipo. 
 La differenza col concetto di insieme è che mentre in un insieme un elemento non può comparire più di una volta, nella lista uno stesso elemento può comparire più volte, in posizione diverse. 
 
-## 6.2 SPECIFICA SINTATTICA LISTA
+## 7.1 SPECIFICA SINTATTICA LISTA
 
 ![Immagine](tipi1.png)
 
-## 6.3 SPECIFICA SEMANTICA LISTA
+## 7.2 SPECIFICA SEMANTICA LISTA
 ![Immagine](tipi2.png)
 
