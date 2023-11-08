@@ -97,21 +97,4 @@ ID     | TITOLO | DESCRIZIONE
 
 ![Immagine](MicrosoftTeams-image.png)|
 
-### 4.1 Architettura Client/Server
 
-Abbiamo deciso di sviluppare la nostra applicazione con architettura Client/Server in modo da mettere a disposizione il servizio CoronaBBS su rete. Nel nostro caso, il Server ha la responsabilità della logica di gestione dei dati (i dati sono salvati su un database) e della logica applicativa; infatti è il server che gestisce le varie operazioni che il client vuole fare. Il client ha la responsabilità della logica di presentazione; infatti il client nel nostro sistema ha il compito di mostrare le diverse finestre e inviare messaggi al server per la gestione delle risposte.
-
-Abbiamo deciso di dividere in questo modo le responsabilità tra Client e Server in quanto la gestione dei messaggi non richiede molta banda. Inoltre il Client può essere eseguito anche su computer datati in quanto non ha responsabilità sulla logica applicativa.
-
-### 4.2 Database
-
-Abbiamo deciso di utilizzare il database in modo da non essere legati agli svantaggi dei file tra cui:
-
-- I dati sono organizzati in insiemi indipendenti (le relazioni fra i dati non sono rappresentate);
-- Gli operatori disponibili sui file dipendono dal tipo di archivio (sequenziale, relativo, associativo);
-- Per effettuare semplici operazioni sui dati è necessario scrivere programmi.
-- La struttura logica di un archivio deve essere dichiarata in tutti i programmi che ne fanno uso.
-
-### 4.3 GameDescription e nextMove()
-
-Abbiamo deciso di utilizzare la classe GameDescription in modo da rendere tutti i giochi simili, infatti tutti i giochi devono implementare il metodo *nextMove()* che prende in input una tripla, Verbo - Oggetto - Aggettivo, e in base a questo, il sistema comprende quale operazione dovrà effettuare. Il metodo *nextMove()* restituisce una stringa relativa al comando in modo tale da rendere il metodo indipendente dal Client su cui verrà mostrato il messaggio.
