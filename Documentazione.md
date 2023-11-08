@@ -97,4 +97,6 @@ ID     | TITOLO | DESCRIZIONE
 
 ![Immagine](MicrosoftTeams-image.png)|
 
+![Immagine](MicrosoftTeams-image(1).png)|
+
 
