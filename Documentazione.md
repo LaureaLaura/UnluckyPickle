@@ -96,7 +96,7 @@ ID     | TITOLO | DESCRIZIONE
 ## 4. Diagramma UML
 
 ![Immagine](MicrosoftTeams-image.png)
-## 5. MAPPA di GIOCO
+## 5. MAPPA GIOCO
 ![Immagine](MappaGioco.png)
 
 
