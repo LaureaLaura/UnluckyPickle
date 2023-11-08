@@ -1,11 +1,13 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Progetto per l'esame di Metodi Avanzati di Programmazione
+   - Catherine Martin Duarte
+   - Elisa Stufano
+   - Nicolò Orsi
  */
 
 package com.mycompany.app;
 import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.Set;
 import Parser.OutputParser;
 import Parser.Parser;
@@ -15,9 +17,6 @@ import Type.Comandi;
 import Type.Game;
 import Type.GamePrint;
 import Type.Printable;
-
-
-import java.io.*;
 import java.util.Scanner;
 
 public class App {
@@ -74,10 +73,6 @@ public class App {
 
             while (scanner.hasNextLine()) {
                 String comando = scanner.nextLine();
-                /*
-                 * System.out.print("\033[H\033[2J");
-                 * System.out.flush();
-                 */
                 OutputParser op = parser.parser(comando, game.getStanzaCorrente().getObjects(), game.getComandi(),
                         game.getInventario());
 

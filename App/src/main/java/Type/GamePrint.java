@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Type;
-
-
 import java.util.Scanner;
 
 public class GamePrint implements Printable {
         // text
-        public static final String GREEN = "\033[0;32m"; // GREEN
-        public static final String ANSI_RESET = "\u001B[0m"; // COLORE STANDARD DI JAVA
+        public static final String GREEN = "\033[0;32m"; 
+        public static final String ANSI_RESET = "\u001B[0m"; 
         public static final String CYAN = "\033[0;36m";
         public static final String BLUE = "\u001B[33m";
         public static final String RED = "\033[0;31m";
@@ -22,15 +16,10 @@ public class GamePrint implements Printable {
         // background
         public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
         public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
-        public static final String YELLOW_BACKGROUND = "\033[43m"; // YELLOW
-        public static final String BLUE_BACKGROUND = "\033[44m"; // BLUE
-        public static final String PURPLE_BACKGROUND = "\033[45m"; // PURPLE
-        public static final String CYAN_BACKGROUND = "\033[46m";
-        public static final String BLACK_BACKGROUND = "\033[40m"; // BLACK
-        public static final String RED_BACKGROUND = "\033[41m";
-
+  
         Scanner scan = new Scanner(System.in);
-
+         
+        @Override
         public void print() {
                 System.out.println("");
         }
@@ -153,6 +142,7 @@ public class GamePrint implements Printable {
                 boolean start = false;
                 String risp = "";
                 Scanner scanner = new Scanner(System.in);
+                
                 if (ready.equals("si")) {
                         start = true;
                 } else if (ready.equals("no")) {
@@ -170,9 +160,7 @@ public class GamePrint implements Printable {
                         } else {
                                 start = false;
                         }
-
                 }
                 return start;
         }
-
 }

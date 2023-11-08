@@ -1,12 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.app;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import Parser.OutputParser;
 import Timer.stopWatch;
@@ -34,10 +26,10 @@ public class UnluckyPickle extends Game {
      static final int PASSWORD = 256;
      GamePrint print = new GamePrint();
      stopWatch tempo = new stopWatch();
-
+     
+     @Override
      public void init() throws Exception {
-          // comandi
-
+         
           SetComandi nord = new SetComandi("nord", Comandi.NORD);
           nord.setAlias(new String[] { "n", "N", "Nord", "NORD", "north", "North" });
           getComandi().add(nord);
@@ -97,7 +89,6 @@ public class UnluckyPickle extends Game {
           SetComandi end = new SetComandi("end", Comandi.END);
           end.setAlias(new String[] { "exit", "esci", "termina" });
           getComandi().add(end);
-          // stanze
 
           Stanza salone = new Stanza(1, "Salone",
                     "Il tuo soggiorno, con tocchi di modernità uniti ad un tocco di vintage, ha un'ampia finestra che da sulla strada, coperta da una tenda per privacy. Un grande divano in pelle stile anni 90. "
@@ -129,7 +120,6 @@ public class UnluckyPickle extends Game {
           segreta.setLook(
                     "\nLa stanza è piccola, un po' buia. In mezzo si trova un tavolino con sopra una cupola di vetro che conserva il tuo prezioso sanchezium.\n");
 
-          // mappa
           salone.setDirections(camera, bagno, cucina, laboratorio);
           bagno.setDirections(salone, null, null, null);
           cucina.setDirections(null, null, null, salone);
@@ -143,8 +133,6 @@ public class UnluckyPickle extends Game {
           getStanze().add(laboratorio);
           getStanze().add(camera);
           getStanze().add(segreta);
-
-          // oggetti
 
           Oggetti taselloPaperella = new Oggetti(1, "paperella",
                     "Un tasello con l'immagine di una paperella.", bagno, true, false);
@@ -410,7 +398,7 @@ public class UnluckyPickle extends Game {
                                         } else {
 
                                              System.out.println(
-                                                       "\nMannaggia alle caramelle! LA CASSETTIERA NON SI APRE! Sei stato troppo intelligente a creare un sistema di sicurezza per proteggere i tuoi pregiati averi scientifici. \r\n"
+                                                       "\nMannaggia alle caramelle! LA CASSETTIERA NON SI APRE! Sei stato troppo intelligente a creare un sistema di sicurezza per proteggere i tuoi pregiati averi scientifici.\r\n"
                                                                  +
                                                                  "\nENIGMA: ci sono tre tasselli mancanti per aprire il cassetto. Devi trovarli:\n");
                                              p.printEnigmi();
@@ -431,8 +419,7 @@ public class UnluckyPickle extends Game {
                          if (op.getOggetto().getId() == 17) {
                               if (antidote) {
                                    System.out.println(
-                                             "Non si può negare che le patatine alla porchetta hanno sempre il loro fascino, per questo sono le tue preferite. Forse un pochino salato. Il mondo pian piano inizia a diventare più grande, alla sua forma normale."
-                                                       + " Ti guardi le braccia e vedi che non sono più verdi, non odori più di cetriolo, è incredibile!! SEI DI NUOVO UN ESSERE UMANO!\n\n");
+                                             "Non si può negare che le patatine alla porchetta hanno sempre il loro fascino, per questo sono le tue preferite. Forse un pochino salato.\nIl mondo pian piano inizia a diventare più grande, alla sua forma normale.\nTi guardi le braccia e vedi che non sono più verdi, non odori più di cetriolo, è incredibile!! SEI DI NUOVO UN ESSERE UMANO!\n\n");
                                    end(print);
                               } else {
                                    System.out.println("\nPrima devi prepararlo.");
@@ -441,19 +428,17 @@ public class UnluckyPickle extends Game {
                               op.getOggetto().setBevuta(true);
                               transform = true;
                               System.out.println(
-                                        "\nLa pozione è amara, acida e un po' salata, ma funziona solo se la bevi tutta, quindi fai un ulteriore sforzo e finalmente la finisci. Ti senti energico, e sembra che stia funzionando!"
-                                                  + "\nAll'improvviso, senti cambiare qualcosa dentro te. La stanza diventa sempre più grande e ti senti il pavimento sempre più vicino. Diventi sempre più piccolo... C'è qualcosa che non va.");
+                                        "\nLa pozione è amara, acida e un po' salata, ma funziona solo se la bevi tutta, quindi fai un ulteriore sforzo e finalmente la finisci. Ti senti energico, e sembra che stia funzionando!\n\nAll'improvviso, senti cambiare qualcosa dentro te. La stanza diventa sempre più grande e ti senti il pavimento sempre più vicino. Diventi sempre più piccolo... C'è qualcosa che non va.");
                          }
                     }
                } else if (op.getComandoParser().getTipoComando() == Comandi.INDIZI) {
                     p.printEnigmi();
                } else if (op.getComandoParser().getTipoComando() == Comandi.LEGGI) {
                     if (op.getOggetto() != null) {
-                         if (op.getOggetto().getName() == "nota") {
+                         if (op.getOggetto().getName().equals("nota")) {
                               System.out.println("\n" + op.getOggetto().getDescrizione());
                               System.out.println(
-                                        "\nOra inizi a ricordarti... Il sanchezium è un elemento chimico da te scoperto nel 1999. È un elemento molto raro, per cui lo tieni nascosto in una stanza segreta."
-                                                  + "\nPer aprire la stanza, devi dire la parola segreta.");
+                                        "\nOra inizi a ricordarti... Il sanchezium è un elemento chimico da te scoperto nel 1999. È un elemento molto raro, per cui lo tieni nascosto in una stanza segreta.\n\nPer aprire la stanza, devi dire la parola segreta.");
                               System.out.println(
                                         "\n*inserisci il comando *indovinello* per avere l'indovinello che ti svelerà la parola segreta.*");
                          } else {
@@ -523,7 +508,7 @@ public class UnluckyPickle extends Game {
      }
 
      private void end(PrintStream out) {
-          GamePrint print = new GamePrint();
+          print = new GamePrint();
           System.out.println();
           out.println(
                     "\nSei lo scienziato più forte del mondo!\n");

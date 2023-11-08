@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Parser;
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,15 +10,14 @@ import java.util.Set;
 
 public class ParserBase {
 
-    public static Set<String> loadAndRead(File paroleInutili) throws IOException { // carica il file e lo legge,
-                                                                                   // inserendo nel set gli articoli o
-                                                                                   // parole inutili per il parser
+    public static Set<String> loadAndRead(File paroleInutili) throws IOException {
+                                                                                   
+                                                                                   
 
         Set<String> setInutili = new HashSet<>();
         BufferedReader letturaFile = new BufferedReader(new FileReader(paroleInutili));
         while (letturaFile.ready()) {
             setInutili.add(letturaFile.readLine().toLowerCase());
-
         }
         letturaFile.close();
         return setInutili;

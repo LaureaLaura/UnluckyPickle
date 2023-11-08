@@ -1,13 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class OggettoContenitore extends Oggetti { // CLASSE CREATA PER OGGETTI CHE POSSONO CONTENERE ALTRI OGGETTI
+public class OggettoContenitore extends Oggetti { 
 
     private List<Oggetti> list = new ArrayList<>();
 

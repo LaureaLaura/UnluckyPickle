@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class SetComandi {
-
     private String nomeComando;
     private Comandi tipocomando;
     private Set<String> alias;
