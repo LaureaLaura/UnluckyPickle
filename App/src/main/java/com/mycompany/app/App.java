@@ -18,7 +18,9 @@ import Type.Game;
 import Type.GamePrint;
 import Type.Printable;
 import java.util.Scanner;
-
+/**
+ * La classe `App` rappresenta il punto di ingresso per l'applicazione del gioco.
+ */
 public class App {
     private final Game game;
     private Parser parser;
@@ -27,7 +29,11 @@ public class App {
     public static final String GREEN_BRIGHT = "\033[0;92m";
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
-
+    /**
+     * Costruttore della classe `App`.
+     *
+     * @param game L'oggetto `Game` che rappresenta il gioco.
+     */
     public App(Game game) {
         this.game = game;
         try {
@@ -45,7 +51,9 @@ public class App {
         }
 
     }
-
+     /**
+     * Esegue il gioco e interagisce con l'utente.
+     */
     public void execute() {
         stopWatch watch = new stopWatch();
         watch.start();
@@ -102,12 +110,20 @@ public class App {
                             "                                                     |              `---'                                   ");
         }
     }
-
+    /**
+     * Metodo principale per l'avvio dell'applicazione.
+     *
+     * @param args Gli argomenti della riga di comando.
+     */
     public static void main(String[] args){
         App app = new App(new UnluckyPickle());
         app.execute();
     }
-
+    /**
+     * Stampa l'oggetto `thing` implementando l'interfaccia `Printable`.
+     *
+     * @param thing L'oggetto da stampare.
+     */
     static void printThing(Printable thing) {
         thing.print();
     }

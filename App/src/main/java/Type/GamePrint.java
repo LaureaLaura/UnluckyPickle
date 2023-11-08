@@ -1,8 +1,12 @@
 package Type;
 import java.util.Scanner;
-
+/**
+ * Questa classe fornisce metodi per la stampa di testo colorato e diverse funzionalità
+ * utili all'interno di un gioco. Implementa l'interfaccia `Printable` per la personalizzazione
+ * della stampa.
+ */
 public class GamePrint implements Printable {
-        // text
+        // Costanti per i colori del testo
         public static final String GREEN = "\033[0;32m"; 
         public static final String ANSI_RESET = "\u001B[0m"; 
         public static final String CYAN = "\033[0;36m";
@@ -13,7 +17,7 @@ public class GamePrint implements Printable {
         public static final String PURPLE = "\033[0;35m";
         public static final String GREEN_BRIGHT = "\033[0;92m";
         public static final String ANSI_YELLOW = "\u001B[33m";
-        // background
+        // Costanti per lo sfondo 
         public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
         public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
   
@@ -23,7 +27,9 @@ public class GamePrint implements Printable {
         public void print() {
                 System.out.println("");
         }
-
+        /**
+        * Stampa il logo del gioco.
+        */
         public void UnluckyPrint() {
                 System.out.println(BLACK + ANSI_WHITE_BACKGROUND +
                                 "===================================================================================================="
@@ -45,6 +51,9 @@ public class GamePrint implements Printable {
                                 "\n====================================================================================================\n"
                                 + ANSI_RESET);
         }
+        /**
+        * Stampa la storia introduttiva del gioco.
+        */
 
         public void printStory() {
                 System.out.println(
@@ -56,7 +65,9 @@ public class GamePrint implements Printable {
                 System.out.println(
                                 "In questo momento ti trovi sul divano. Oramai sei in pensione, passi la maggior parte delle tue giornate in tranquillità a guardare documentari, però non abbandoni la tua passione per la scienza. Infatti, stai sperimentando una pozione anti-aging, che ti permette di non invecchiare ulteriormente e ti fa sentire più energico e ringiovanito. È pronta, ce l'hai in mano, ora devi solo berla per vedere se funziona davvero!\n");
         }
-
+        /**
+        * Stampa gli indovinelli del gioco.
+        */
         public void printEnigmi() {
                 System.out.println(PURPLE + "  _               _                   _                  _   _   _ \r\n" + //
                                 " (_)             | |                 (_)                | | | | (_)\r\n" + //
@@ -75,7 +86,9 @@ public class GamePrint implements Printable {
                                 "\n-> È un liquido marroncino, può piacere macchiato o marocchino, se lo vuoi offrire 50cent dovrai uscire."
                                 + ANSI_RESET);
         }
-
+        /**
+        * Stampa una descrizione dell'ingresso al laboratorio.
+        */
         public void enterLab() {
                 System.out.println(
                                 "\nTi trovi davanti alla porta del laboratorio, per aprirla devi avere tutti gli ingredienti della pozione e devi inserire la password che è costituita da 3 caratteri che completano la seguente sequenza numerica:\r\n"
@@ -85,7 +98,9 @@ public class GamePrint implements Printable {
                                                 " /   ---  '--/   ---   /  /_   ---   /_ '--/   ---   /   \r\n" + //
                                                 "/           /         /  (__)       (__)  /         o    " + "\n");
         }
-
+        /**
+        * Stampa un messaggio di aiuto con la lista dei comandi del gioco.
+        */
         public void printHelp() {
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
@@ -107,7 +122,9 @@ public class GamePrint implements Printable {
                                 BLUE + "=================================================================================================="
                                                 + ANSI_RESET);
         }
-
+        /**
+        * Stampa un messaggio per comunicare la trasformazione in un cetriolo.
+        */
         public void printTransform() {
                 System.out.println(GREEN + "\n\n*** Santo cielo! Sono diventato un cetriolo! ***\n" + ANSI_RESET);
                 System.out.println(
@@ -115,7 +132,9 @@ public class GamePrint implements Printable {
                                                 + "\nSei in panico, non sai cosa fare. Qualcosa deve essere andato storto...... o forse sai benissimo cosa. "
                                                 + "\nAvrai messo troppo concentrato di cetriolo nella pozione! Per fortuna nel tuo quaderno degli appunti hai la ricetta dell'antidoto della pozione.");
         }
-
+        /**
+        * Stampa un messaggio di game over.
+        */
         public void printGameOver() {
                 System.out.println(BLUE
                                 + "                                                                                    \r\n"
@@ -137,7 +156,12 @@ public class GamePrint implements Printable {
                                 "   \\_/__/                                                                           "
                                 + ANSI_RESET);
         }
-
+        /**
+        * Chiede all'utente se desidera iniziare il gioco.
+        *
+        * @param ready La risposta dell'utente.
+        * @return true se l'utente è pronto a iniziare il gioco, altrimenti false.
+        */
         public boolean startGame(String ready) {
                 boolean start = false;
                 String risp = "";
