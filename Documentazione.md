@@ -95,8 +95,8 @@ ID     | TITOLO | DESCRIZIONE
 
 ## 4. Diagramma UML
 
-![Immagine](MicrosoftTeams-image.png)|
+![Immagine](MicrosoftTeams-image.png)
 
-![Immagine](MappaGioco.png)|
+![Immagine](MappaGioco.png)
 
 
