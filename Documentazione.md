@@ -108,7 +108,8 @@ La differenza col concetto di insieme è che mentre in un insieme un elemento no
 
 ## 6.2 SPECIFICA SINTATTICA LISTA
 
-
+![Immagine](Screenshot2023-11-08174239.png)
 
 ## 6.3 SPECIFICA SEMANTICA LISTA
+![Immagine](Screenshot2023-11-08174428.png)
 
