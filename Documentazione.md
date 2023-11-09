@@ -25,7 +25,7 @@ Questo documento fornisce una documentazione riguardante il progetto realizzato 
 
 ## 1. Introduzione
 L'applicazione è un gioco d'avventura testuale giocabile tramite interfaccia grafica basata su Java e avviabile su terminali Windows, Linux e Mac OS.
-Il gioco tratta la disavventura di uno scienzato, che si trova nel mezzo di un bel pasticcio. Sperimentando uno delle sue tante invenzioni, si ritrova con un effetto non desiderato. Magicamente diventa un cetriolo, e deve trovare la soluzione per tornare ad essere un umano. Il gioco è ambientato nella casa dello scienziato, essa è composta da:
+Il gioco tratta la disavventura di uno scienzato, che si trova nel mezzo di un bel pasticcio. Sperimentando una delle sue tante invenzioni, si ritrova con un effetto non desiderato. Magicamente, diventa un cetriolo e deve trovare la soluzione per tornare ad essere un umano. Il gioco è ambientato nella casa dello scienziato. Essa è composta da:
 -salone
 -camera da letto
 -bagno 
