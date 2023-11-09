@@ -1,4 +1,5 @@
 package Type;
+
 /**
  * Questa interfaccia rappresenta un oggetto stampabile.
  */

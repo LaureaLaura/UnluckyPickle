@@ -1,4 +1,5 @@
 package com.mycompany.app;
+
 import java.util.Scanner;
 import Parser.OutputParser;
 import Timer.stopWatch;
@@ -10,8 +11,10 @@ import Type.OggettoContenitore;
 import Type.SetComandi;
 import Type.Stanza;
 import java.io.PrintStream;
+
 /**
- * La classe `UnluckyPickle` estende la classe `Game` e rappresenta il gioco UnluckyPickle.
+ * La classe `UnluckyPickle` estende la classe `Game` e rappresenta il gioco
+ * UnluckyPickle.
  */
 public class UnluckyPickle extends Game {
 
@@ -26,15 +29,18 @@ public class UnluckyPickle extends Game {
      static final int PASSWORD = 256;
      GamePrint print = new GamePrint();
      stopWatch tempo = new stopWatch();
+
      /**
       * Inizializza il gioco UnluckyPickle.
       * Si parte con l'inizializzazione delle stanze, degli oggetti e dei comandi.
-      * Si inizializza la stanza corrente con la stanza salone e si settano le stanze adiacenti. 
+      * Si inizializza la stanza corrente con la stanza salone e si settano le stanze
+      * adiacenti.
+      * 
       * @throws Exception Se si verifica un errore durante l'inizializzazione.
       */
      @Override
      public void init() throws Exception {
-          
+
           SetComandi nord = new SetComandi("nord", Comandi.NORD);
           nord.setAlias(new String[] { "n", "N", "Nord", "NORD", "north", "North" });
           getComandi().add(nord);
@@ -253,12 +259,15 @@ public class UnluckyPickle extends Game {
           antidote = false;
           secretRoom = false;
      }
-/**
- * Questo metodo gestisce la prossima mossa del gioco in base al comando fornito.
- *
- * @param op    L'oggetto OutputParser contenente i dettagli del comando immesso dall'utente.
- * @param print Oggetto PrintStream per la stampa dei messaggi di gioco.
- */
+
+     /**
+      * Questo metodo gestisce la prossima mossa del gioco in base al comando
+      * fornito.
+      *
+      * @param op    L'oggetto OutputParser contenente i dettagli del comando immesso
+      *              dall'utente.
+      * @param print Oggetto PrintStream per la stampa dei messaggi di gioco.
+      */
      public void prossimaMossa(OutputParser op, PrintStream print) {
           GamePrint p = new GamePrint();
           // se il comando è nullo
@@ -516,14 +525,18 @@ public class UnluckyPickle extends Game {
           }
 
      }
-/**
- * Termina il gioco e stampa un messaggio di vittoria.
- * 
- * Questo metodo è chiamato per concludere il gioco e visualizzare un messaggio di vittoria.
- * Dopo la chiamata a questo metodo, il gioco viene interrotto e il programma termina.
- * 
- * @param out Il flusso di stampa su cui verrà stampato il messaggio di vittoria.
- */
+
+     /**
+      * Termina il gioco e stampa un messaggio di vittoria.
+      * 
+      * Questo metodo è chiamato per concludere il gioco e visualizzare un messaggio
+      * di vittoria.
+      * Dopo la chiamata a questo metodo, il gioco viene interrotto e il programma
+      * termina.
+      * 
+      * @param out Il flusso di stampa su cui verrà stampato il messaggio di
+      *            vittoria.
+      */
      private void end(PrintStream out) {
           print = new GamePrint();
           System.out.println();

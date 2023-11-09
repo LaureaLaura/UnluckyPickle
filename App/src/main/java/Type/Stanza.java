@@ -1,9 +1,13 @@
 package Type;
+
 import java.util.ArrayList;
 import java.util.List;
+
 /**
- * Questa classe rappresenta una stanza all'interno del gioco. Ogni stanza ha un identificatore unico, un nome, una descrizione,
- * indicazioni sui punti cardinali, un testo di osservazione (`guarda`), e una lista di oggetti presenti nella stanza.
+ * Questa classe rappresenta una stanza all'interno del gioco. Ogni stanza ha un
+ * identificatore unico, un nome, una descrizione,
+ * indicazioni sui punti cardinali, un testo di osservazione (`guarda`), e una
+ * lista di oggetti presenti nella stanza.
  */
 public class Stanza {
 
@@ -16,6 +20,7 @@ public class Stanza {
     private Stanza est = null;
     private Stanza ovest = null;
     private List<Oggetti> objects = new ArrayList<>();
+
     /**
      * Costruttore per una stanza con identificatore.
      *
@@ -24,11 +29,12 @@ public class Stanza {
     public Stanza(int id) {
         this.id = id;
     }
+
     /**
      * Costruttore per una stanza con identificatore, nome e descrizione.
      *
-     * @param id L'identificatore unico della stanza.
-     * @param nome Il nome della stanza.
+     * @param id          L'identificatore unico della stanza.
+     * @param nome        Il nome della stanza.
      * @param descrizione La descrizione della stanza.
      */
     public Stanza(int id, String nome, String descrizione) {
@@ -36,6 +42,7 @@ public class Stanza {
         this.nome = nome;
         this.descrizione = descrizione;
     }
+
     /**
      * Restituisce il nome della stanza.
      *
@@ -44,6 +51,7 @@ public class Stanza {
     public String getName() {
         return this.nome;
     }
+
     /**
      * Imposta il nome della stanza.
      *
@@ -52,6 +60,7 @@ public class Stanza {
     public void setName(String nome) {
         this.nome = nome;
     }
+
     /**
      * Imposta la descrizione della stanza.
      *
@@ -60,6 +69,7 @@ public class Stanza {
     public void setDescription(String descrizione) {
         this.descrizione = descrizione;
     }
+
     /**
      * Restituisce la descrizione della stanza.
      *
@@ -68,12 +78,13 @@ public class Stanza {
     public String getDescription() {
         return this.descrizione;
     }
+
     /**
      * Imposta le stanze adiacenti (nord, sud, est, ovest) alla stanza corrente.
      *
-     * @param nord La stanza a nord.
-     * @param sud La stanza a sud.
-     * @param est La stanza a est.
+     * @param nord  La stanza a nord.
+     * @param sud   La stanza a sud.
+     * @param est   La stanza a est.
      * @param ovest La stanza a ovest.
      */
     public void setDirections(Stanza nord, Stanza sud, Stanza est, Stanza ovest) {
@@ -82,6 +93,7 @@ public class Stanza {
         this.est = est;
         this.ovest = ovest;
     }
+
     /**
      * Restituisce la stanza a nord.
      *
@@ -90,6 +102,7 @@ public class Stanza {
     public Stanza getNorth() {
         return this.nord;
     }
+
     /**
      * Restituisce la stanza a sud.
      *
@@ -98,6 +111,7 @@ public class Stanza {
     public Stanza getSouth() {
         return this.sud;
     }
+
     /**
      * Restituisce la stanza a est.
      *
@@ -106,6 +120,7 @@ public class Stanza {
     public Stanza getEast() {
         return this.est;
     }
+
     /**
      * Restituisce la stanza a ovest.
      *
@@ -114,6 +129,7 @@ public class Stanza {
     public Stanza getWest() {
         return this.ovest;
     }
+
     /**
      * Imposta il testo di osservazione della stanza.
      *
@@ -122,6 +138,7 @@ public class Stanza {
     public void setLook(String guarda) {
         this.guarda = guarda;
     }
+
     /**
      * Restituisce l'identificatore unico della stanza.
      *
@@ -130,6 +147,7 @@ public class Stanza {
     public int getId() {
         return this.id;
     }
+
     /**
      * Restituisce il testo di osservazione della stanza.
      *
@@ -138,6 +156,7 @@ public class Stanza {
     public String getLook() {
         return this.guarda;
     }
+
     /**
      * Restituisce la lista degli oggetti presenti nella stanza.
      *

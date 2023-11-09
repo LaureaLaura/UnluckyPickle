@@ -1,4 +1,5 @@
 package Parser;
+
 import Type.Comandi;
 import Type.Oggetti;
 import Type.SetComandi;
@@ -14,8 +15,8 @@ public class OutputParser {
     /**
      * Costruttore della classe OutputParser con tre parametri.
      *
-     * @param comando Il set di comandi associato al parser.
-     * @param oggetto L'oggetto associato al parser.
+     * @param comando       Il set di comandi associato al parser.
+     * @param oggetto       L'oggetto associato al parser.
      * @param oggInventario L'oggetto dell'inventario associato al parser.
      */
     public OutputParser(SetComandi comando, Oggetti oggetto, Oggetti oggInventario) {

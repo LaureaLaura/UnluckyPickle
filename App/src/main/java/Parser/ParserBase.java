@@ -1,4 +1,5 @@
 package Parser;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -7,8 +8,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 /**
- * La classe ParserBase fornisce metodi per la gestione di parole inutili e l'analisi di stringhe.
+ * La classe ParserBase fornisce metodi per la gestione di parole inutili e
+ * l'analisi di stringhe.
  */
 public class ParserBase {
 
@@ -20,8 +23,6 @@ public class ParserBase {
      * @throws IOException Se si verifica un errore durante la lettura del file.
      */
     public static Set<String> loadAndRead(File paroleInutili) throws IOException {
-                                                                                   
-                                                                                   
 
         Set<String> setInutili = new HashSet<>();
         BufferedReader letturaFile = new BufferedReader(new FileReader(paroleInutili));
@@ -31,10 +32,11 @@ public class ParserBase {
         letturaFile.close();
         return setInutili;
     }
+
     /**
      * Analizza una stringa di parole, rimuovendo le stopwords specificate.
      *
-     * @param string La stringa da analizzare.
+     * @param string    La stringa da analizzare.
      * @param stopwords Un insieme di stopwords da rimuovere dalla stringa.
      * @return Una lista di parole risultanti dall'analisi della stringa.
      */
