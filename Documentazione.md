@@ -20,6 +20,7 @@ Questo documento fornisce una documentazione riguardante il progetto realizzato 
    1. [Specifica Sintattica Lista](#71-Specifica-Sintattica-Lista)
     2. [Specifica Semantica Lista](#72-Specifica-Semantica-Lista)
 8. [Scelte Progettuali](#8-Scelte-Progettuali)
+9. [Javadoc](#9-Javadoc)
 
 
 
@@ -190,3 +191,26 @@ Fanno parte del gioco oggetti che a loro volta contengono altri oggetti. La clas
 La classe Game costituisce il nucleo del gioco e offre un'architettura flessibile per gestire comandi, stanze, inventario e la logica del gioco. La classe è dichiarata come astratta, indicando che deve essere estesa da sottoclassi concrete. Questa scelta consente di fornire una struttura di base comune per tutti i tipi di giochi, mentre le sottoclassi possono implementare dettagli specifici.
 La presenza di un metodo astratto "init" richiede alle sottoclassi di fornire un'implementazione per l'inizializzazione del gioco. Questo metodo è essenziale per configurare il gioco iniziale, le stanze, gli oggetti, ecc., offrendo un punto di estensione chiave per personalizzare il gioco. La classe utilizza un oggetto "PrintStream" per la visualizzazione degli output. Questa scelta consente una gestione più flessibile delle operazioni di stampa e può essere facilmente adattata per l'output su diverse piattaforme. 
 In generale, la classe Game è progettata in modo modulare e offre un'interfaccia chiara per l'estensione e la personalizzazione dei giochi. Le scelte progettuali riflettono principi di incapsulamento, astrazione ed estensibilità.
+
+## 9. Javadoc
+
+La documentazione del progetto UnluckyPickle è arricchita e resa accessibile attraverso Javadoc, uno strumento di generazione automatica della documentazione per codice sorgente Java. La Javadoc fornisce una descrizione esaustiva di classi, metodi, campi e altri elementi del codice, migliorando la comprensione del progetto per gli sviluppatori, facilitando la manutenzione e favorendo la collaborazione.
+
+**Come è Generata:**
+
+La documentazione Javadoc è generata automaticamente dal codice sorgente Java arricchito con annotazioni speciali. Gli sviluppatori incorporano commenti Javadoc direttamente nel codice, descrivendo l'uso e il funzionamento di classi e metodi. L'esecuzione di un comando Javadoc attraverso strumenti come Maven o da riga di comando converte questi commenti in una documentazione strutturata, solitamente in formato HTML.
+
+**Posizione nella Struttura del Progetto:**
+
+La documentazione generata da Javadoc risiede all'interno della directory **"target"** del progetto. Questa collocazione è standard e consente una separazione chiara tra il codice sorgente e la documentazione. Gli sviluppatori possono accedere facilmente alla documentazione generata aprendo il file **"index.html"** nella directory "target" attraverso un browser web. Questa pratica facilita la distribuzione del software, poiché la documentazione è inclusa nella struttura del progetto.
+
+### Vantaggi della Javadoc:
+
+
+
+**Chiarezza e Coerenza:** La Javadoc promuove la creazione di documentazione chiara e coerente direttamente correlata al codice sorgente.
+
+**Facilita la Comprensione:** Gli sviluppatori possono rapidamente comprendere l'utilizzo e il comportamento delle classi e dei metodi grazie alla documentazione dettagliata.
+
+**Aggiornamenti Sincronizzati:** Poiché la Javadoc è generata automaticamente dal codice sorgente, rimane sincronizzata con le modifiche al codice, garantendo che la documentazione sia sempre aggiornata.
+La Javadoc all'interno del folder "target" non solo arricchisce la comprensione del progetto per gli sviluppatori, ma rappresenta anche una risorsa fondamentale per la manutenzione e l'evoluzione continua del software.
