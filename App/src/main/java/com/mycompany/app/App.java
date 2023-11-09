@@ -47,14 +47,15 @@ public class App {
         }
 
         try {
-            Set<String> paroleInutili = ParserBase
-                    .loadAndRead(new File("src\\main\\java\\paroleInutili.txt"));
+            Set<String> paroleInutili = ParserBase.loadAndRead(
+                    new File(getClass().getClassLoader().getResource("paroleInutili.txt").getFile()));
             parser = new Parser(paroleInutili);
         } catch (IOException ex) {
             System.err.println(ex);
         }
-
     }
+
+    
 
     /**
      * Esegue il gioco e interagisce con l'utente.
