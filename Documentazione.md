@@ -118,10 +118,58 @@ La differenza col concetto di insieme è che mentre in un insieme un elemento no
 
 ## 7.1 Specifica Sintattica Lista
 
-![Immagine](tipi1.png)
+Tipi: lista, posizione, boolean, tipoelem
+
+Operatori:
+- crealista : ( ) → lista
+- listavuota : (lista) → boolean
+- leggilista : (posizione, lista) → tipoelem
+- scrivilista : (tipoelem,posizione,lista) → lista
+- primolista : (lista) → posizione
+- finelista : (posizione, lista) → boolean
+- succlista : (posizione, lista) → posizione
+- predlista : (posizione, lista) → posizione
+- inslista : (tipoelem,posizione,lista) → lista
+- canclista : (posizione, lista) → lista
 
 ## 7.2 Specifica Semantica Lista
-![Immagine](tipi2.png)
+Tipi
+- Lista: insieme delle sequenze l = < a1, a2, ... , an>, n>=0, di elementi di tipo tipoelem dove l'elemento i-esimo ha valore a(i) e posizione pos(i)
+- boolean: insieme dei valori di verità
+
+Operatori
+- crealista = l'
+  - POST: l' = <> (sequenza vuota)
+- listavuota(l) = b
+  - POST: b = true se l= < >
+  - b = false altrimenti
+- leggilista(p, l) = a
+  - PRE: p = pos(i) 1 <= i <= n
+  - POST: a = a(i)
+- scrivilista(a, p, l) = l'
+  - PRE: p = pos(i) 1 <= i <= n
+  - POST: l' = < a1, a2, ... , ai-1, a, ai+1, ... , an>
+- primolista(l) = p
+  - PRE: listavuota(l) = false
+  - POST: p = pos(1)
+- finelista(p, l) = b
+  - PRE: p = pos(i) 1 <= i <= n+1
+  - POST: b = true se p = pos(n+1)
+  - b= false altrimenti
+- succlista(p, l) = q
+  - PRE: p = pos(i) 1 <= i <= n
+  - POST: q = pos(i+1)
+- predlista(p, l) = q
+  - PRE: p = pos(i) 2 <= i <=n
+  - POST: q = pos(i-1)
+- inslista(a, p, l) = l'
+  - PRE: p = pos(i) 1 <= i <= n+1
+  - POST: l' = < a1, a2, ... , ai-1, a, ai, ai+1, ... , an>, se 1 <= i <= n
+  - l' = <a1, a2, ... ,an, a > , se i = n+1
+  - (e quindi l' = < a > se i = 1 e l = < >)
+- canclista(p, l) = l'
+  - PRE: p = pos(i) 1 <= i <= n
+  - POST: l' = < a1, a2, ... , ai-1, ai+1, ... , an>
 
 ## 8. Scelte Progettuali
 
