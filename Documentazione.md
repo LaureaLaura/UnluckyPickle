@@ -21,6 +21,7 @@ Questo documento fornisce una documentazione riguardante il progetto realizzato 
     2. [Specifica Semantica Lista](#72-Specifica-Semantica-Lista)
 8. [Scelte Progettuali](#8-Scelte-Progettuali)
 9. [Javadoc](#9-Javadoc)
+10. [Vantaggi della Javadoc](#10-Vantaggi-della-Javadoc)
 
 
 
@@ -57,7 +58,7 @@ ID     | TITOLO | DESCRIZIONE
 
 
 
-## 3  Requisiti non funzionali
+## 3. Requisiti non funzionali
 
 |  ID     | REQUISITO        | DESCRIZIONE                                                  |
 | :---:   | ---------------- | :----------------------------------------------------------- |
@@ -204,7 +205,7 @@ La documentazione Javadoc è generata automaticamente dal codice sorgente Java a
 
 La documentazione generata da Javadoc risiede all'interno della directory **"target"** del progetto. Questa collocazione è standard e consente una separazione chiara tra il codice sorgente e la documentazione. Gli sviluppatori possono accedere facilmente alla documentazione generata aprendo il file **"index.html"** nella directory "target" attraverso un browser web. Questa pratica facilita la distribuzione del software, poiché la documentazione è inclusa nella struttura del progetto.
 
-## Vantaggi della Javadoc:
+## 10. Vantaggi della Javadoc:
 
 
 
