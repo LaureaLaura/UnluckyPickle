@@ -125,6 +125,8 @@ La differenza col concetto di insieme è che mentre in un insieme un elemento no
 
 ## 8. Scelte Progettuali
 
+Alcuni punti chiavi del nostro progetto sono descritti nei prossimi paragrafi:
+
 All'avviare del gioco un cronometro viene inizializzato per misurare il tempo trascorso durante il gioco. Ci sono alcune considerazioni riguardo questa scelta progettuale:
 La classe stopWatch estende la classe Thread, il che implica che il cronometro sarà eseguito in un thread separato quando viene chiamato il metodo start(). Tuttavia, potrebbe essere utile considerare l'implementazione dell'interfaccia Runnable invece di estendere direttamente Thread, per favorire una migliore progettazione dell'ereditarietà. Inolte, abbiamo deciso di utilizzare System.nanoTime() per misurare il tempo, in quanto fornisce una precisione molto elevata.
 
