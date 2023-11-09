@@ -19,6 +19,7 @@ Questo documento fornisce una documentazione riguardante il progetto realizzato 
 7. [Specifica algebrica - Lista](#7-Specifica-algebrica-Lista)
    1. [Specifica Sintattica Lista](#71-Specifica-Sintattica-Lista)
     2. [Specifica Semantica Lista](#72-Specifica-Semantica-Lista)
+8. [Scelte Progettuali](#8-Scelte-Progettuali)
 
 
 
@@ -121,4 +122,8 @@ La differenza col concetto di insieme è che mentre in un insieme un elemento no
 
 ## 7.2 Specifica Semantica Lista
 ![Immagine](tipi2.png)
+
+## 8. Scelte Progettuali
+
+
 
