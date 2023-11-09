@@ -15,10 +15,10 @@ Questo documento fornisce una documentazione riguardante il progetto realizzato 
 3. [Requisiti non funzionali](#3-Requisiti-non-funzionali)
 4. [Divisione in Package e Classi Implementate](#4-Divisione-in-Package-e-Classi-Implementate)
 5. [Diagramma UML](#5-Diagramma-UML)
-6. [MAPPA GIOCO](#6-MAPPA-GIOCO)
-7. [SPECIFICA ALGEBRICA LISTA](#SPECIFICA-ALGEBRICA-LISTA)
-   1. [SPECIFICA SINTATTICA LISTA](#71-SPECIFICA-SINTATTICA-LISTA)
-    2. [SPECIFICA SEMANTICA LISTA](#72-SPECIFICA-SEMANTICA-LISTA)
+6. [Mappa Gioco](#6-Mappa-Gioco)
+7. [Specifica algebrica - Lista](#7-Specifica-algebrica-Lista)
+   1. [Specifica Sintattica Lista](#71-Specifica-Sintattica-Lista)
+    2. [Specifica Semantica Lista](#72-Specifica-Semantica-Lista)
 
 
 
@@ -105,20 +105,20 @@ ID     | TITOLO | DESCRIZIONE
 ## 5. Diagramma UML
 
 ![Immagine](MicrosoftTeams-image.png)
-## 6. MAPPA GIOCO
+## 6. Mappa Gioco
 ![Immagine](MappaGioco.png)
 
 
-## 7. SPECIFICA ALGEBRICA LISTA
+## 7. Specifica Algebrica Lista
 
 Nel nostro progetto viene utilizzata molto frequentemente la struttura algebrica lista. Questa viene utilizata per la lista degli oggetti dell'inventario, la lista delle stanze che ci sono nel gioco e la lista di comandi possibili da usare.
 Una lista è una sequenza finita, anche vuota, di elementi dello stesso tipo. 
 La differenza col concetto di insieme è che mentre in un insieme un elemento non può comparire più di una volta, nella lista uno stesso elemento può comparire più volte, in posizione diverse. 
 
-## 7.1 SPECIFICA SINTATTICA LISTA
+## 7.1 Specifica Sintattica Lista
 
 ![Immagine](tipi1.png)
 
-## 7.2 SPECIFICA SEMANTICA LISTA
+## 7.2 Specifica Semantica Lista
 ![Immagine](tipi2.png)
 
